@@ -1,32 +1,22 @@
+const url = 'https://flynn.boolean.careers/exercises/api/random/mail'
 const { createApp } = Vue;
-
-const app = createApp({
-    
-})
 
 createApp({
     data() {
         return {
-            emailList: [],               //Lista email
-            nameList: ['Piero',
-        'Paolo','Poldo']
+            emailsNumber: 10,
+            emailList: []              //Lista email
         }
     },
-    beforeMount() {
+    mounted() {
         // Ciclo per avere dieci email
-        const fragment = [];
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= this.emailsNumber; i++) {
         // Pusha email generata con API dentro emailList
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        axios.get(url)
             .then((response) => {
-                fragment.push(response.data.response);
+                this.emailList.push(response.data.response);
             })
         }
-        // Montati insieme con timeout
-        setTimeout(() => {
-            this.emailList = [...fragment];
-        }, 500);
-
-    }
+    }   
 }).mount('#app');
 

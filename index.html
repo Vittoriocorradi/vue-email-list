@@ -16,7 +16,7 @@
     <!-- Vue Container -->
     <div id="app" v-cloak>
         <!-- Lista Email -->
-        <ul>
+        <ul v-show="emailList.length === emailsNumber">
             <li v-for="email in emailList"> {{email}} </li>
         </ul>
         <!-- /Lista Email -->
