@@ -3,14 +3,16 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            emailList: []
+            emailList: []               //Lista email
         }
     },
     beforeMount() {
-        for (let i = 1; 1 <= 10; i++) {
+        // Ciclo per avere dieci email
+        for (let i = 1; i <= 10; i++) {
+        // Pusha email generata con API dentro emailList
         axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => {
-                console.log(response.data.response);
+                this.emailList.push(response.data.response);
             })
         }
     }

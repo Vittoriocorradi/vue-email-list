@@ -13,9 +13,15 @@
 </head>
 <body>
 
+    <!-- Vue Container -->
     <div id="app">
-
+        <!-- Lista Email -->
+        <ul>
+            <li v-for="email in emailList"> {{ email }} </li>
+        </ul>
+        <!-- /Lista Email -->
     </div>
+    <!-- /Vue Container -->
     
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
