@@ -14,10 +14,10 @@
 <body>
 
     <!-- Vue Container -->
-    <div id="app">
+    <div id="app" v-cloak>
         <!-- Lista Email -->
         <ul>
-            <li v-for="email in emailList"> {{ email }} </li>
+            <li v-for="email in emailList"> {{email}} </li>
         </ul>
         <!-- /Lista Email -->
     </div>
