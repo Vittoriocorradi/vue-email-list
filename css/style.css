@@ -13,3 +13,83 @@ RESET
 [v-cloak] {
     display: none;
 }
+
+/*
+--------
+TYPO
+--------
+*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #eee;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    color: #1b2838;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+--------
+BODY
+--------
+*/
+
+body {
+    background-color: #1b2838;
+    padding: 3.75rem 2.5rem;
+}
+
+.container {
+    max-width: 71.25rem;
+    margin: 0 auto;
+}
+
+ul {
+    padding-top: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+}
+
+li {
+    background-color: #eee;
+    margin-bottom: 1.25rem;
+    width: 35.125rem;
+    border-radius: 2.5rem;
+}
+
+a {
+    width: 100%;
+    display: inline-block;
+    padding: .9375rem 0;
+
+}
+
+/*
+--------
+EFFETTI
+--------
+*/
+
+li:hover {
+    background-color: rgb(246, 136, 124);
+    box-shadow: 0 0 .375rem .1875rem #aaa;
+    color: #eee;
+}

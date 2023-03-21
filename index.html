@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- /Font -->
+
     <!-- Axios CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -14,10 +21,11 @@
 <body>
 
     <!-- Vue Container -->
-    <div id="app" v-cloak>
+    <div id="app" class="container" v-cloak>
         <!-- Lista Email -->
+        <h1 v-show="emailList.length === emailsNumber">Email utili</h1>
         <ul v-show="emailList.length === emailsNumber">
-            <li v-for="email in emailList"> {{email}} </li>
+            <li v-for="email in emailList"><a :href="'mailto:' + email"> {{email}} </a></li>
         </ul>
         <!-- /Lista Email -->
     </div>
